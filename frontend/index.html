@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Todo List</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="./main.mjs" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.css"/>
+</head>
+<body>
+    <div class="head">
+        <div class="logo">
+            <h1>Todo</h1>
+        </div>
+        <div class="header">
+            <input type="text" id="class-search" placeholder="Enter your class name">
+            <button id="search-button"><i class="ri-search-line"></i></button>
+            <button id="logout-button" style="display:none;"><i class="ri-logout-circle-line"></i></button>
+        </div>
+    </div>
+    <div class="container">
+        <h1 id="class-name" style="display: none;"></h1>
+        <div class="todo-container">
+            <input type="text" id="todo-input" placeholder="Enter Your Text Here" disabled>
+            <button id="add-button" disabled><i class="ri-add-box-line"></i></button>
+        </div>
+        <div id="content"></div>
+    </div>
+
+    <!-- Custom Alert Modal -->
+    <div id="custom-alert" class="modal">
+        <div class="modal-content">
+          <span id="alert-text"></span>
+          <button id="close-alert">OK</button>
+        </div>
+    </div>
+
+    <!-- Custom Prompt Modal -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+          <span>Edit Todo:</span>
+          <input type="text" id="edit-input" />
+          <button id="save-edit">Save</button>
+          <button id="cancel-edit">Cancel</button>
+        </div>
+    </div>
+
+
+<!-- Login Modal -->
+<div id="login-modal" class="model">
+  <div class="model-content">
+    <h2>Login</h2>
+    <input type="email" id="login-email" placeholder="Email" required />
+    <input type="password" id="login-password" placeholder="Password" required />
+    <button id="login-button">Login</button>
+    <p>Don't have an account? <span id="show-signup">Sign up now</span></p>
+    <!-- Error Message Container for Login -->
+    <div id="login-error" class="error-message"></div>
+  </div>
+</div>
+
+<!-- Signup Modal -->
+<div id="signup-modal" class="model">
+  <div class="model-content">
+    <h2>Sign Up</h2>
+    <input type="text" id="signup-name" placeholder="Name" required />
+    <input type="email" id="signup-email" placeholder="Email" required />
+    <input type="password" id="signup-password" placeholder="Password" required />
+    <button id="signup-button">Sign Up</button>
+    <p>Already have an account? <span id="show-login">Login now</span></p>
+    <!-- Error Message Container for Signup -->
+    <div id="signup-error" class="error-message"></div>
+  </div>
+</div>
+
+       
+</body>
+</html>

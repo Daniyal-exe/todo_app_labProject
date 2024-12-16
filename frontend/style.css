@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: #1a202c;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #171923;
+  height: auto;
+  width: 100%;
+}
+.head h1{
+  color: #fff;
+  padding-left: 20px;
+}
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+.header{
+  padding-right: 20px;
+  display: flex;
+  gap: 5px;
+}
+.header input, .header button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+.header input:focus{
+  outline: none;
+}
+.header button{
+  background-color: #006da4;
+  padding: 11px;
+}
+.header button:hover{
+  cursor: pointer;
+}
+.todo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.todo-container input, .todo-container button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.todo-container button{
+  background-color: #006da4;
+  border: none;
+  padding: 10px;
+}
+.todo-container input {
+  width: 300px;
+  margin-right: 10px;
+  border: none;
+}
+.todo-container input:focus{
+  outline: none;
+}
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 30px;
+  flex-direction: column;
+}
+ul li{
+  color: #fff;
+  list-style: none;
+  max-width: 300px;
+  word-wrap: break-word;
+}
+.delete-btn{
+  margin: 0 10px;
+  padding: 5px 20px;
+  background-color: #006da4;
+  border-radius: 5px;
+  border: none;
+}
+.delete-btn i{
+  font-size: 16px;
+}
+.edit-btn{
+  padding: 5px 20px;
+  background-color: #006da4;
+  border-radius: 5px;
+  border: none;
+}
+.edit-btn i{
+  font-size: 16px;
+}
+.button-wrapper {
+  display: flex;
+  gap: 10px;
+}
+.todo-text {
+  word-break: break-word;
+  flex-grow: 1;
+}
+.todo-item span {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  word-wrap: break-word;
+  max-width: 300px;
+}
+.todo-item button {
+  margin-right: 5px;
+  padding: 5px 10px;
+}
+.todo-item button i{
+  font-size: 16px;
+}
+#class-name {
+  color: #ffffff;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 40px;
+}
+#content{
+  background-color: #171923;
+  padding: 20px;
+}
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 9999; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 300px;
+  text-align: center;
+  border-radius: 10px;
+}
+#close-alert {
+  margin-top: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#close-alert:hover {
+  background-color: #45a049;
+}
+#edit-modal .modal-content {
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+#edit-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #888;
+  border-radius: 5px;
+}
+#save-edit, #cancel-edit {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 5px;
+}  
+#save-edit {
+  background-color: #4CAF50;
+  color: white;
+}  
+#cancel-edit {
+  background-color: #f44336;
+  color: white;
+}  
+#save-edit:hover {
+  background-color: #45a049;
+} 
+#cancel-edit:hover {
+  background-color: #e53935;
+}
+
+
+
+@media (max-width:524px){
+  .head{
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+  .head h1{
+     padding-left: 0;
+  }
+  .header{
+    padding-right: 0;
+  }
+}
+
+@media (max-width:496px){
+  .todo-item span {
+    max-width: 200px;
+  }
+} 
+    
+@media (max-width:456px){
+  .todo-container input {
+    width: 190px;
+  }
+}
+
+@media (max-width:408px){
+  .todo-item span {
+    max-width: 140px;
+  }
+} 
+
+@media (max-width:348px){
+  .todo-item span {
+    max-width: 90px;
+  }
+} 
+
+
+
+/* Modal Styles */
+.model {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); /* Blur background */
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+/* Modal Content Styling */
+.model-content {
+  background-color: #fff;
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Input fields and Button Styling */
+.model-content input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.model-content button {
+  width: 95%;
+  padding: 10px;
+  background-color: #006da4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.model-content button:hover {
+  background-color: #005b88;
+}
+
+.model-content p {
+  margin-top: 10px;
+  color: #333;
+}
+
+#show-signup, #show-login {
+  color: #006da4;
+  cursor: pointer;
+}
+
+#show-signup:hover, #show-login:hover {
+  text-decoration: underline;
+}
+
+/* Background Blur Effect when Modal is Active */
+body.model-active {
+  backdrop-filter: blur(2px);
+}
+
+/* Error Message Styling */
+.error-message {
+  color: #d9534f; /* Red color for error messages */
+  margin-top: 10px;
+  font-size: 14px;
+  display: none; /* Hidden by default */
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Show error message when there's an error */
+.error-message.show {
+  display: block;
+  text-align: center;
+}
