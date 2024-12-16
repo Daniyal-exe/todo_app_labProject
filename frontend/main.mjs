@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function() {
       clearErrorMessage('signup'); // Clear any existing error messages before validation
   
       if (name && email && password) {
-        fetch('http://localhost:3002/signup', {
+        fetch('https://todoapplabproject-production.up.railway.app/signup', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ name, email, password }),
@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const password = loginPassword.value.trim();
   
       if (email && password) {
-          fetch('http://localhost:3002/login', {
+          fetch('https://todoapplabproject-production.up.railway.app/login', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ email, password }),

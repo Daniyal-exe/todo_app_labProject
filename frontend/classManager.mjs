@@ -18,7 +18,7 @@ export class ClassManager {
                 throw new Error('User not logged in');
             }
 
-            const response = await fetch(`http://localhost:3002/todos/${userId}`);
+            const response = await fetch(`https://todoapplabproject-production.up.railway.app/todos/${userId}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch todos');
             }
@@ -42,7 +42,7 @@ export class ClassManager {
             throw new Error('User not logged in');
         }
 
-        const response = await fetch('http://localhost:3002/todos', {
+        const response = await fetch('https://todoapplabproject-production.up.railway.app/todos', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -151,7 +151,7 @@ openEditModal(currentText, todoId, className, callback) {
                 throw new Error('User not logged in');
             }
     
-            const response = await fetch(`http://localhost:3002/todos/${todoId}`, {
+            const response = await fetch(`https://todoapplabproject-production.up.railway.app/todos/${todoId}`, {
                 method: 'DELETE',
             });
     
@@ -179,7 +179,7 @@ openEditModal(currentText, todoId, className, callback) {
                 throw new Error('User not logged in');
             }
     
-            const response = await fetch(`http://localhost:3002/todos/${todoId}`, {
+            const response = await fetch(`https://todoapplabproject-production.up.railway.app/todos/${todoId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
