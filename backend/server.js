@@ -5,7 +5,11 @@ const cors = require('cors');
 const app = express(); // Create an Express application
 const PORT = 3002; // Port for the server
 
-app.use(cors());
+app.use(cors({
+    origin: ['https://todo-list-labproject.netlify.app', 'http://localhost:3000'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+}));
 // Middleware to parse JSON bodies
 app.use(express.json());
 
