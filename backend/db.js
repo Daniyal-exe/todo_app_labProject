@@ -1,7 +1,7 @@
 const mysql = require('mysql2');
 require('dotenv').config({ path: '../.env' });
 
-const urlDB = `mysql://uxz0qggbhfc3dsim:Zl0rLiT3BuIFrX7zllhf@bajvsp7e9c0lg8a22dcp-mysql.services.clever-cloud.com:3306/bajvsp7e9c0lg8a22dcp`
+const urlDB = `mysql://todoapp_guidebatat:7a0ed7727b48f46f019615525245b3e4e08f807b@85-2e.h.filess.io:3306/todoapp_guidebatat`
 
 const db = mysql.createConnection(urlDB);
 
